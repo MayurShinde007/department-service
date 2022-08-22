@@ -22,6 +22,12 @@ public class DepartmentController {
 	@Autowired
 	DepartmentService deptService;
 
+	@GetMapping("/")
+	// @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	public String start() {
+		return "Welcome to Department Service";
+	}
+
 	@GetMapping("/home")
 	// @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
 	public String home() {
