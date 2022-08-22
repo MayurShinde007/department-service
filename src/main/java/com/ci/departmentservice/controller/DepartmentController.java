@@ -55,7 +55,7 @@ public class DepartmentController {
 	 */
 
 	@PutMapping("/department/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
+	// @PreAuthorize("hasRole('ADMIN')")
 	public ApiResponse<?> updatedepartment(@PathVariable String id, @RequestBody Department department) {
 		return deptService.updateDepartment(Long.parseLong(id), department);
 	}
